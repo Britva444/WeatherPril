@@ -61,6 +61,7 @@ final class WeatherViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .darkViolet
         title = "Погода"
+        print("Kal")
                 
         presenter = WeatherPresenter(view: self)
         

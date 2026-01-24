@@ -19,7 +19,7 @@ final class WeatherService: WeatherServiceProtocol {
         let cityRequest = city.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? city
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityRequest)&appid=\(apiKey)&units=metric&lang=ru")
         else { return }
-        
+        print("Sack")
         URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
             if let error = error {
                 completion(.failure(error))

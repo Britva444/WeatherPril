@@ -14,7 +14,6 @@ protocol WeatherViewProtocol: AnyObject {
 protocol WeatherPresenterProtocol {
     func getWeather(for city: String)
 }
-
 final class WeatherPresenter: WeatherPresenterProtocol {
     private weak var view: WeatherViewProtocol?
     private let service: WeatherServiceProtocol
@@ -22,6 +21,7 @@ final class WeatherPresenter: WeatherPresenterProtocol {
     init(view: WeatherViewProtocol, service: WeatherServiceProtocol = WeatherService()) {
         self.view = view
         self.service = service
+        print("KOK")
     }
     
     func getWeather(for city: String) {
